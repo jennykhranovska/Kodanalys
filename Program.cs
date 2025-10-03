@@ -37,21 +37,20 @@ namespace Kodanalys
                         break;
 
 
-                        case "4":
+                    case "4":
+
+                        UserMenu.SearchUser(userNames, ref userCount);
+                        break;
 
 
+                    case "5":
+                        isRunning = false;
+                        break;
 
+                    default:
+                        Console.WriteLine("Ogiltigt val.");
+                        break;
                 }
-               
-                else if (menuChoice == "5")
-                {
-                    isRunning = false;
-                }
-                else
-                {
-                    Console.WriteLine("Ogiltigt val.");
-                }
-                Console.WriteLine();
             }
         }
     }
