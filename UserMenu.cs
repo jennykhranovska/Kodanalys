@@ -44,7 +44,7 @@ namespace Kodanalys
             int indexToRemove = -1;
             for (int i = 0; i < userCount; i++)
             {
-                if (userNames[i] == nameToRemove)
+                if (userNames[i].ToLower() == nameToRemove.ToLower())
                 {
                     indexToRemove = i;
                     break;
@@ -81,7 +81,7 @@ namespace Kodanalys
             bool exists = false;
             for (int i = 0; i < userCount; i++)
             {
-                if (userNames[i] == name)
+                if (userNames[i].ToLower() == name.ToLower())
                 {
                     exists = true;
                     break;
