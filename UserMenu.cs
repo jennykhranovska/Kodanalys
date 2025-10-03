@@ -28,11 +28,17 @@ namespace Kodanalys
         }
         public static void ShowUsers(string[] userNames, int numberOfNamesStored)
         {
-
-            Console.WriteLine("Användare:");
-            for (int i = 0; i < numberOfNamesStored; i++)
+            if (numberOfNamesStored == 0)
             {
-                Console.WriteLine(userNames[i]);
+                Console.WriteLine("Inga användare hittades.");
+            }
+            else
+            {
+                Console.WriteLine("Användare:");
+                for (int i = 0; i < numberOfNamesStored; i++)
+                {
+                    Console.WriteLine(userNames[i]);
+                }
             }
         }
 
@@ -58,6 +64,7 @@ namespace Kodanalys
                     userNames[i] = userNames[i + 1];
                 }
                 userCount--;
+                Console.WriteLine($"\"{nameToRemove}\" är borttagen.");
             }
 
             else
@@ -100,10 +107,7 @@ namespace Kodanalys
 
             }
         }
-        public static void ExitProgram(ref bool isRunning)
-        {
-            isRunning = false;
-        }
+        
     }
 }
 
