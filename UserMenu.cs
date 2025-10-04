@@ -18,7 +18,10 @@ namespace Kodanalys
             {
                 userNames[numberOfNamesStored] = userName;
                 numberOfNamesStored++;
+
+                Console.WriteLine($"Användaren \"{userName}\" har lagts till.");
             }
+
             else
             {
                 Console.WriteLine("Listan är full!");
@@ -37,7 +40,7 @@ namespace Kodanalys
                 Console.WriteLine("Användare:");
                 for (int i = 0; i < numberOfNamesStored; i++)
                 {
-                    Console.WriteLine(userNames[i]);
+                    Console.WriteLine($"Användare \"{userNames[i]}\" finns i listan.");
                 }
             }
         }
@@ -64,7 +67,7 @@ namespace Kodanalys
                     userNames[i] = userNames[i + 1];
                 }
                 userCount--;
-                Console.WriteLine($"\"{nameToRemove}\" är borttagen.");
+                Console.WriteLine($"Användare \"{nameToRemove}\" är borttagen.");
             }
 
             else
@@ -72,8 +75,6 @@ namespace Kodanalys
             {
                 Console.WriteLine("Användaren hittades inte.");
             }
-
-
 
         }
 
@@ -107,10 +108,9 @@ namespace Kodanalys
 
             }
         }
-        
+
     }
 }
 
 
 
-     

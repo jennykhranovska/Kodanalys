@@ -2,7 +2,7 @@
 
 namespace Kodanalys
 {
-    class program
+    class Program
     {
         static string[] userNames = new string[10];
         static int userCount = 0;
@@ -11,7 +11,10 @@ namespace Kodanalys
         {
             bool isRunning = true;
             while (isRunning)
+
             {
+                Console.Clear();
+
                 Console.WriteLine("Välj ett alternativ:");
                 Console.WriteLine("1. Lägg till användare");
                 Console.WriteLine("2. Visa alla användare");
@@ -24,7 +27,6 @@ namespace Kodanalys
                 {
                     case "1":
                         UserMenu.AddUser(userNames, ref userCount);
-
                         break;
 
                     case "2":
@@ -32,16 +34,12 @@ namespace Kodanalys
                         break;
 
                     case "3":
-
                         UserMenu.DeleteUser(userNames, ref userCount);
                         break;
 
-
                     case "4":
-
                         UserMenu.SearchUser(userNames, ref userCount);
                         break;
-
 
                     case "5":
                         isRunning = false;
@@ -51,6 +49,9 @@ namespace Kodanalys
                         Console.WriteLine("Ogiltigt val.");
                         break;
                 }
+
+                Console.WriteLine("\nTryck på valfri tangent för att fortsätta...");
+                Console.ReadKey();
             }
         }
     }
